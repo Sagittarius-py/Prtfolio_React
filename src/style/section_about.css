@@ -1,4 +1,10 @@
+@media (min-width: 640px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
 
+@media (min-width: 1024px) {
+  .cards { grid-template-columns: repeat(4, 1fr); }
+}
 
 .shadow-about {
     width: 100%;
@@ -29,10 +35,39 @@
 
     margin-top: -5vh;
     padding-top: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-right: 5vw;
+    display: grid;
+
+    padding: 10vh 10vw 0 10vw;
+
+    grid-template-columns: repeat(4, 20vw);
+    grid-template-rows: 10vh repeat(3, 26vh) 10vh;
+    grid-column-gap: 1vw;
+    grid-row-gap: 0px;
 }
   
 .about-title{
 color: white;}
+
+#about-card-one{
+  grid-area: 2 / 1 / 4 / 2;
+}
+#about-card-two{
+  grid-area: 3 / 2 / 5 / 3; 
+}
+#about-card-three{
+  grid-area: 2 / 3 / 4 / 4;
+}
+#about-card-four{
+  grid-area: 3 / 4 / 5 / 5;
+}
+
+.card-body{
+  width: 15vw;
+  min-width: 200px;
+  height: 52vh;
+  min-height: 300px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  transition: 2s;
+}
