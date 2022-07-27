@@ -1,0 +1,29 @@
+
+
+.shadow-bot{
+    width: 100%;
+    height: 15vh;
+    position: absolute; 
+    background-image: linear-gradient(0deg, rgba(10,10,15, 1) 0%, rgba(10,10,15, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+  top: -15vh;
+}
+
+.about-section{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(10,10,15, 1);
+    position: absolute;
+  }
+  
+.about-container{
+    width: 100%;
+    height: 120vh;
+    background-size: cover;
+
+    margin-top: -5vh;
+    padding-top: 10vh;
+}
+  
+.about-title{
+    animation: fade-left;
+}
