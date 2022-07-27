@@ -1,11 +1,18 @@
 
 
-.shadow-bot{
+.shadow-about {
     width: 100%;
     height: 15vh;
     position: absolute; 
-    background-image: linear-gradient(0deg, rgba(10,10,15, 1) 0%, rgba(10,10,15, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+.shadow-top{
+  background-image: linear-gradient(0deg, rgba(10,10,15, 1) 0%, rgba(10,10,15, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
   top: -15vh;
+}
+.shadow-bot{
+  background-image: linear-gradient(180deg, rgba(10,10,15, 1) 0%, rgba(10,10,15, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+  bottom: -15vh;
 }
 
 .about-section{

@@ -47,7 +47,8 @@
 
   .title-container{
     width: 60%;
-    height: 55vh;
+    height: 30vw;
+    min-height: 30vw;
     z-index: 10;
     display: flex;
     justify-content: center;
@@ -59,7 +60,7 @@
   
   .title-inner-content{
     width: 100%;
-    height: 55vh;
+    height: 55vw;
     display: flex;
     flex-direction: column;
 
@@ -77,11 +78,11 @@
   }
   
   .hello{
-    font-size: 140pt;
+    font-size: 10vw;
     top: 0;
   }
   .there{
-    font-size: 170pt;
+    font-size: 15vw;
     bottom: 0;
   }
   .dot{
