@@ -1,20 +1,20 @@
+import React, { useState, useEffect } from "react";
+
 import "./App.css";
 
-
-import NavBar from "./components/navbar";
-import Home from "./components/section_home";
-import About from "./components/section_about";
+import Page from "./components/Page";
+import Loading from "./components/Loading";
 
 function App() {
-  return (
-    <>
-      <NavBar />
-      <div className="App wrapper ">
-        <Home />
-        <About />
-      </div>
-    </>
-  );
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+  }, []);
+
+  return <>{loading ? <Loading /> : <Page />}</>;
 }
 
 export default App;

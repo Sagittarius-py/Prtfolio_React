@@ -22,8 +22,10 @@
 
     margin-top: -5vh;
     padding-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
   
 .about-title{
-    animation: fade-left;
-}
+color: white;}

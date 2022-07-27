@@ -1,5 +1,7 @@
 import "../style/section_about.css";
 
+import { motion, useScroll } from "framer-motion";
+
 const About = () => {
   return (
     <>
@@ -7,7 +9,14 @@ const About = () => {
         <div className="shadow-about shadow-bot" />
 
         <div className="about-container">
-          <h1 className="reveal fade-left about-title">cokolwiek</h1>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.5 }}
+          >
+            <h1 className="about-title">cokolwiek</h1>
+          </motion.div>
         </div>
       </section>
     </>

@@ -1,0 +1,36 @@
+.loading-container{
+    width: 100%;
+    height: 100vh;
+  background-color: rgba(20, 20, 20, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  @keyframes dots {
+    0%{
+        content: "";
+    }
+    33%{
+        content: ".";
+    }
+    66%{
+        content: "..";
+    }
+    100%{
+        content: "...";
+    }
+  }
+
+  .loading-name{
+    font-size: 20pt;
+    color: white;
+    position: absolute;
+  }
+  .loading-name::after{
+    content: "";
+    animation: dots;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
