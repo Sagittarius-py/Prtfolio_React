@@ -1,39 +1,37 @@
+.card-body{
+  min-width: 200px;
+  min-height: 300px;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 25px 0 rgba( 200, 200, 200, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.inner-card-body{
+  overflow: hidden;
+  width: 95%;
+  height: 97%;
+  border-radius: 10px;
+  background-color: rgba(240, 240, 240, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content:center;
+
+}
 
   @media only screen and (min-width: 1024px) {
     .card-body{
-      width: 15vw;
-      min-width: 200px;
+      width: 19vw;
+
       height: 52vh;
-      min-height: 300px;
-      
-
-      background: rgba( 255, 255, 255, 0.25 );
-      box-shadow: 0 8px 25px 0 rgba( 200, 200, 200, 0.37 );
-      backdrop-filter: blur( 4px );
-      -webkit-backdrop-filter: blur( 4px );
-      border-radius: 10px;
-
-      border-radius: 10px;
-      transition: 2s;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .inner-card-body{
-        
-        overflow: hidden;
-        width: 95%;
-        height: 97%;
-        border-radius: 10px;
-        background-color: rgba(240, 240, 240, 0.8);
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-content:center;
 
     }
+
     #about-card-one{
         grid-area: 2 / 1 / 4 / 2;
       }
@@ -50,31 +48,18 @@
 
 
 
-@media only screen and (max-width: 1023px) {
-    .card-body{
+@media only screen and (min-width: 700px) and (max-width: 1023px) {
+  .card-body{
+    width: 40vw;
+    height: 52vh;
+  }
+}
 
-
-      background: rgba( 255, 255, 255, 0.25 );
-      box-shadow: 0 8px 25px 0 rgba( 200, 200, 200, 0.37 );
-      border-radius: 10px;
-
-      border-radius: 10px;
-      transition: 2s;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .inner-card-body{
-        width: 95%;
-        height: 97%;
-        border-radius: 10px;
-        background-color: rgba(240, 240, 240, 0.8);
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-content:center;
-
-    }
-
+@media only screen and (max-width: 699px){
+  .card-body{
+    width: 80vw;
+    height: 40vh;
+    margin-bottom: 50px;
+    padding: 5px 0 5px 0;
+  }
 }

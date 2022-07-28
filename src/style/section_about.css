@@ -37,6 +37,7 @@
     color: white;}
 
 
+
 .pic-container{
   width: 100%;
   display: flex;
@@ -83,13 +84,6 @@
     grid-column-gap: vw;
     grid-row-gap: 0px;
 }
-
-.card-body{
-  width: 15vw;
-  min-width: 200px;
-  height: 52vh;
-  min-height: 300px;
-}
 }
 @media only screen and  (max-width: 1023px) {
   .about-container{
@@ -110,15 +104,11 @@
       margin-top: -5vh;
       padding: 15vh 0 0 0;
     }
-    
-  .card-body{
-    width: 40vw;
-  }
 }
 
 @media only screen and (max-width: 699px){
   .about-section{
-    height: 250vh;
+    height: 200vh;
   }
   .about-container{
       margin-top: -5vh;
