@@ -1,0 +1,11 @@
+.projects-section{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/bg1.jpg");
+    background-size: cover;
+    background-position: right;
+    position: relative;
+    top: 0;
+    display: flex;
+    align-items: center;
+}
