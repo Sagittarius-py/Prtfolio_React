@@ -18,10 +18,15 @@
   color: rgb(255, 255, 255);
   transition: 0.5s;
 	opacity: 0.6;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5px;
 }
 .nav-ico{
 	filter: invert(100%);
 	width: 20px;
+  padding: 5px;
 }
 
 
@@ -30,9 +35,13 @@
   color: rgba(255, 255, 255, .9);
   transform: scale(1.2);
   cursor: pointer;
-		opacity: 1;
+	opacity: 1;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 50%);
 }
-
+@media only screen and (max-width: 420px) {
+  .nav-bar-btn:hover{
+    transform: scale(1);}
+}
 
 @media only screen and (min-width: 1024px) {
 .nav-bar{
