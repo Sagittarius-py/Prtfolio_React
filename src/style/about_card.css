@@ -6,7 +6,14 @@
       min-width: 200px;
       height: 52vh;
       min-height: 300px;
-      background-color: aliceblue;
+      
+
+      background: rgba( 255, 255, 255, 0.25 );
+      box-shadow: 0 8px 25px 0 rgba( 200, 200, 200, 0.37 );
+      backdrop-filter: blur( 4px );
+      -webkit-backdrop-filter: blur( 4px );
+      border-radius: 10px;
+
       border-radius: 10px;
       transition: 2s;
         display: flex;
@@ -15,12 +22,17 @@
     }
 
     .inner-card-body{
+        
+        overflow: hidden;
         width: 95%;
         height: 97%;
         border-radius: 10px;
-        background-color: red;
+        background-color: rgba(240, 240, 240, 0.8);
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content:center;
+
     }
     #about-card-one{
         grid-area: 2 / 1 / 4 / 2;
@@ -34,4 +46,35 @@
       #about-card-four{
         grid-area: 3 / 4 / 5 / 5;
       }
+}
+
+
+
+@media only screen and (max-width: 1023px) {
+    .card-body{
+
+
+      background: rgba( 255, 255, 255, 0.25 );
+      box-shadow: 0 8px 25px 0 rgba( 200, 200, 200, 0.37 );
+      border-radius: 10px;
+
+      border-radius: 10px;
+      transition: 2s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inner-card-body{
+        width: 95%;
+        height: 97%;
+        border-radius: 10px;
+        background-color: rgba(240, 240, 240, 0.8);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content:center;
+
+    }
+
 }
