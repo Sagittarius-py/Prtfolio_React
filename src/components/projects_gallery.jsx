@@ -1,112 +1,100 @@
-import React, { useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 import "../style/projects_gallery.css";
 
-import ProjectCard from "./ProjectCard";
+import img1 from "../images/screens/1.png";
+import img2 from "../images/screens/2.png";
+import img3 from "../images/screens/3.png";
+
 import { motion } from "framer-motion";
 
 const ProjectGallery = () => {
-  const [active, setActve] = useState(1);
-  const [projects, setProjects] = useState({
-    projects: [
-      {
-        id: 1,
-        name: "first",
-        link: "http://...",
-        active: true,
-      },
-      {
-        id: 2,
-        name: "seccound",
-        link: "http://...",
-        active: false,
-      },
-      {
-        id: 3,
-        name: "third",
-        link: "http://...",
-        active: false,
-      },
-      {
-        id: 4,
-        name: "fourth",
-        link: "http://...",
-        active: false,
-      },
-      {
-        id: 5,
-        name: "fivth",
-        link: "http://...",
-        active: false,
-      },
-      {
-        id: 6,
-        name: "sixth",
-        link: "http://...",
-        active: false,
-      },
-    ],
-  });
+  const [width, setWidth] = useState(0);
+  const carousel = useRef();
 
-  const prev = () => {
-    setActve(active - 1);
-  };
-  const next = () => {
-    setActve(active + 1);
-  };
+  useEffect(() => {
+    console.log(carousel.current.scrollWidth, carousel.current.offsetWidth);
+    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth + 150);
+  }, []);
+
+  const projects = [
+    {
+      id: 1,
+      name: "First Portfolio",
+      image: img1,
+      link: "https://github.com/Sagittarius-py/Portfolio-One",
+      active: true,
+    },
+    {
+      id: 2,
+      name: "Seccond Portfolio",
+      image: img2,
+      link: "https://github.com/Sagittarius-py/Portfolio-Two",
+      active: false,
+    },
+    {
+      id: 3,
+      name: "Third Portfolio",
+      image: img3,
+      link: "https://github.com/Sagittarius-py/Portfolio-Three",
+      active: false,
+    },
+    {
+      id: 4,
+      name: "fourth",
+      link: "http://...",
+      active: false,
+    },
+    {
+      id: 5,
+      name: "fivth",
+      link: "http://...",
+      active: false,
+    },
+    {
+      id: 6,
+      name: "sixth",
+      link: "http://...",
+      active: false,
+    },
+  ];
 
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0, x: -100 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 1 }}
-        className="projects-container"
-      >
-        {active !== 1 ? (
-          <button className="project-btn prev-btn" onClick={prev}>
-            Previous
-          </button>
-        ) : null}
-        {active !== 6 ? (
-          <button className="project-btn next-btn" onClick={next}>
-            Next
-          </button>
-        ) : null}
-        <div className="projects-inner-content">
-          {projects.projects.map((project) => {
-            if (project.id === active - 1) {
+      <div className="project-carousel">
+        <motion.div
+          ref={carousel}
+          className="carousel"
+          whileTap={{ cursor: "grabbing" }}
+        >
+          <motion.div
+            drag="x"
+            dragConstraints={{ right: 0, left: -width }}
+            className="inner-carousel"
+          >
+            {projects.map((project) => {
               return (
-                <ProjectCard
+                <motion.div
+                  style={{ backgroundImage: `url(${project.image})` }}
+                  className="item"
                   key={project.id}
-                  name={project.name}
-                  classes="prev inactive"
-                />
+                >
+                  <div className="item-content">
+                    <a
+                      className="link"
+                      href={project.link}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      {project.name}
+                    </a>
+                  </div>
+                </motion.div>
               );
-            }
-            if (project.id === active) {
-              return (
-                <ProjectCard
-                  key={project.id}
-                  name={project.name}
-                  classes="active"
-                />
-              );
-            }
-            if (project.id === active + 1) {
-              return (
-                <ProjectCard
-                  key={project.id}
-                  name={project.name}
-                  classes="next inactive"
-                />
-              );
-            }
-            return null;
-          })}
-        </div>
-      </motion.div>
+            })}
+          </motion.div>
+        </motion.div>
+      </div>
     </>
   );
 };

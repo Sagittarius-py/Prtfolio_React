@@ -1,39 +1,69 @@
-@media (min-width: 1024px) {
-.projects-container{
-    width: 100vw;
-    height: 52vh;
-    display: flex;
-    align-items: center;
+.project-carousel{
+    width: 100%;
+    height: 20vw;
+    display:flex;
     justify-content: center;
-}
-.projects-inner-content{
-
-    position: absolute;
-    margin: auto;
-    display: grid;
-    grid-auto-flow:column;
-    overflow: hidden;  
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 100%;
-    grid-column-gap: 20px;
-    grid-row-gap: 0px;
     align-items: center;
+    padding: 6rem;
 }
 
-.project-btn{
-    z-index: 10;
-    position: absolute;
-    width: 75px;
-    height: 75px;
+.carousel{
+    cursor: grab;
+    overflow: hidden;
+    width: 90vw;
+}
+.inner-carousel{
+    display: flex;
+
+}
+
+.project-img{
+    max-height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+
+}
+
+.item{
+    min-height: 40rem;
+    min-width: 30rem;
+    margin: 40px;
+    background-color: #000;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px 0 rgba( 10, 10, 10, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    background-size: cover;
+    background-position: 50%;
+    transition: .5s;
+
+
+}
+.item-content{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+
+    background-color: rgba(0,0,0, .5);
+}
+
+.link{
+    font-size: 40pt;
+    text-decoration: none;
     color: white;
-    background-color: rgba(10, 10, 10, .8);
-    border: none;
-    border-radius: 50%;
 }
-.prev-btn{
-    left: 20vw;
+.item:hover{
+    transition: .5s;
+    transform: scale(1.1);
+    box-shadow: 0 18px 25px 0 rgba( 10, 10, 10, 0.37 );
+
 }
-.next-btn{
-    right: 20vw;
-}
+.item-content:hover{
+    transition: .5s;
+    opacity: 1;
 }
