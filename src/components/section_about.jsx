@@ -31,7 +31,9 @@ const About = () => {
           </AboutCard>
           <AboutCard delay="1" id="about-card-two"></AboutCard>
           <AboutCard delay="1.5" id="about-card-three"></AboutCard>
-          <AboutCard delay="2" id="about-card-four"></AboutCard>
+          <AboutCard delay="2" id="about-card-four">
+            <h1>Contact with Me</h1>
+          </AboutCard>
         </div>
 
         <div className="shadow-about shadow-bot" />

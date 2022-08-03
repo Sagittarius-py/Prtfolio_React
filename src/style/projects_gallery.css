@@ -52,10 +52,11 @@
     background-color: rgba(0,0,0, .5);
 }
 
-.link{
+.name{
     font-size: 40pt;
     text-decoration: none;
     color: white;
+    cursor: pointer;
 }
 .item:hover{
     transition: .5s;
@@ -67,3 +68,8 @@
     transition: .5s;
     opacity: 1;
 }
+@media (min-width: 1024px) {
+    .project-carousel{
+        padding: 6rem;
+    }  }
+  

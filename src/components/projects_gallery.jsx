@@ -59,6 +59,10 @@ const ProjectGallery = () => {
     },
   ];
 
+  const openInNewTab = (url) => {
+    window.open(url, "_blank").focus();
+  };
+
   return (
     <>
       <div className="project-carousel">
@@ -80,14 +84,12 @@ const ProjectGallery = () => {
                   key={project.id}
                 >
                   <div className="item-content">
-                    <a
-                      className="link"
-                      href={project.link}
-                      rel="noreferrer"
-                      target="_blank"
+                    <p
+                      className="name"
+                      onClick={() => openInNewTab(project.link)}
                     >
                       {project.name}
-                    </a>
+                    </p>
                   </div>
                 </motion.div>
               );
