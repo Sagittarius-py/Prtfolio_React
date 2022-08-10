@@ -27,6 +27,11 @@ const AboutCard = (props) => {
             <div className="inner-card-body-expanded">
               {props.children}
               <motion.button
+                initial={{ opacity: 0.6 }}
+                whileHover={{
+                  scale: 1.2,
+                }}
+                whileTap={{ scale: 0.9 }}
                 className="expanded-div-close"
                 onClick={() => setSelectedId(null)}
               />
