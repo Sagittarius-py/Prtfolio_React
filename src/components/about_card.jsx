@@ -16,9 +16,7 @@ const AboutCard = (props) => {
         viewport={{ once: true }}
         id={props.id}
       >
-        <div className="card-body">
-          <div className="inner-card-body">{props.children}</div>
-        </div>
+        <div className="card-body">{props.children}</div>
       </motion.div>
 
       <AnimatePresence>
