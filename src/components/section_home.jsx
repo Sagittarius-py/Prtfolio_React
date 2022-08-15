@@ -1,15 +1,17 @@
 import "../style/section_home.css";
 
 import { useRef } from "react";
+
 import useIsInViewport from "./isVisible";
 
-const Home = () => {
+const Home = (props) => {
   const ref1 = useRef(null);
-  const isInViewport1 = useIsInViewport(ref1);
-  console.log(isInViewport1);
+  let isVisible1 = useIsInViewport(ref1);
+  props.changeVisibility("homeSection", isVisible1);
 
   return (
-    <section className="home parallax__group" ref={ref1}>
+    <section id="home" className="home parallax__group" ref={ref1}>
+      <a name="home" />
       <div className="background" />
       <div className="title-container">
         <div className="title-inner-content ">

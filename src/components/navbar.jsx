@@ -8,20 +8,26 @@ const NavBar = () => {
   return (
     <nav className="nav-bar">
       <div className="nav-bar-content">
-        <button className="nav-bar-btn">
-          <img src={homeIco} className="nav-ico" alt="icon" />
-          Home
-        </button>
+        <a href="#home">
+          <button className="nav-bar-btn">
+            <img src={homeIco} className="nav-ico" alt="icon" />
+            Home
+          </button>
+        </a>
         <span className="separator" />
-        <button className="nav-bar-btn">
-          <img src={aboutIco} className="nav-ico" alt="icon" />
-          About
-        </button>
+        <a href="#about">
+          <button className="nav-bar-btn">
+            <img src={aboutIco} className="nav-ico" alt="icon" />
+            About
+          </button>
+        </a>
         <span className="separator" />
-        <button className="nav-bar-btn">
-          <img src={projectsIco} className="nav-ico" alt="icon" />
-          Projects
-        </button>
+        <a href="#projects">
+          <button className="nav-bar-btn">
+            <img src={projectsIco} className="nav-ico" alt="icon" />
+            Projects
+          </button>
+        </a>
       </div>
     </nav>
   );
