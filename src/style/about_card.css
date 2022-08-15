@@ -2,14 +2,15 @@
   min-width: 200px;
   min-height: 300px;
   background: rgba( 255, 255, 255, .9 );
-  box-shadow: 0 8px 25px 0 rgba( 200, 200, 200, 0.37 );
+  box-shadow: 0 0 25px 1px rgba( 200, 200, 200, 0.37 );
   backdrop-filter: blur( 4px );
   -webkit-backdrop-filter: blur( 4px );
-  border-radius: 10px;
-  display: flex;
+  border-radius: 20px;
+  display: flexbox;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  overflow: hidden;  
+
 }
 
 
@@ -69,6 +70,7 @@
       }
       #about-card-four{
         grid-area: 2 / 3 / 3 / 4;
+        cursor: pointer;
       }
 }
 

@@ -1,8 +1,15 @@
 import "../style/section_home.css";
 
+import { useRef } from "react";
+import useIsInViewport from "./isVisible";
+
 const Home = () => {
+  const ref1 = useRef(null);
+  const isInViewport1 = useIsInViewport(ref1);
+  console.log(isInViewport1);
+
   return (
-    <section className="home parallax__group">
+    <section className="home parallax__group" ref={ref1}>
       <div className="background" />
       <div className="title-container">
         <div className="title-inner-content ">

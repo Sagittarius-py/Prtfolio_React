@@ -1,0 +1,26 @@
+
+.pic-container-4{
+    width: 105%;
+    height: 105%;
+    display: flex;
+    justify-content: center;
+    background-image: url("../../images/pexels-tyler-lastovich-699122.jpg");
+    background-size: cover;
+    background-position: 10%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0px;
+  }
+  
+.title-contact-tile{
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  color: whitesmoke;
+}
+.title-contact-click{
+  position: absolute;
+  top: 80px;
+  left: 30px;
+  color: whitesmoke;
+}

@@ -1,0 +1,17 @@
+.about-tile{
+    width:95%;
+    height:95%;
+}
+.about-tile h1{
+    font-size: 30pt;
+    padding: 10px 0;
+}
+
+.hashtags{
+    padding: 0 0 10px 50px;
+    color: rgba(50, 50, 50, .7);
+    font-style: italic;
+}
+.about-content{
+    padding-left: 20px;
+}

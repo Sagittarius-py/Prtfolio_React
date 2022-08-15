@@ -10,7 +10,9 @@ const AboutCard = (props) => {
     <>
       <motion.div
         layoutId={props.id}
-        onClick={() => setSelectedId(props.id)}
+        onClick={() => {
+          if (props.onClick) setSelectedId(props.id);
+        }}
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
