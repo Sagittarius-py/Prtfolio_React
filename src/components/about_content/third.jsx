@@ -13,30 +13,34 @@ const Third = () => {
   return (
     <>
       <div className="third-content">
-        <h1>My skills & What I'm working with</h1>
-        <div className="all-bar-container">
-          {skills.map((skill) => {
-            return (
-              <div
-                className="progress-bar-container"
-                onInvalid={skill.name}
-                key={skill.name}
-              >
-                <div className="progress-bar">
-                  <div
-                    className="progress-bar-progress"
-                    id={skill.name + "-progress"}
-                    style={{ height: skill.progress + "%" }}
-                  >
-                    <div className="progress-dot" id={skill.name + "-dot"} />
+        <h1 className="third-title">My skills & What I'm working with</h1>
+
+        <div className="third-inner-content">
+          <div className="all-bar-container">
+            {skills.map((skill) => {
+              return (
+                <div
+                  className="progress-bar-container"
+                  onInvalid={skill.name}
+                  key={skill.name}
+                >
+                  <div className="progress-bar">
+                    <div
+                      className="progress-bar-progress"
+                      id={skill.name + "-progress"}
+                      style={{ height: skill.progress + "%" }}
+                    />
                   </div>
+                  <p className="bar-label" for={skill.name}>
+                    {skill.name}
+                  </p>
                 </div>
-                <p className="bar-label" for={skill.name}>
-                  {skill.name}
-                </p>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
+          <div className="additional-info-container">
+            <h3>Additionally</h3>
+          </div>
         </div>
       </div>
     </>

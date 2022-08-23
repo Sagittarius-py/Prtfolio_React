@@ -10,8 +10,7 @@ const Home = (props) => {
   props.changeVisibility("homeSection", isVisible1);
 
   return (
-    <section id="home" className="home parallax__group" ref={ref1}>
-      <a name="home" />
+    <section id="home" className="home parallax__group" ref={ref1} name="home">
       <div className="background" />
       <div className="title-container">
         <div className="title-inner-content ">

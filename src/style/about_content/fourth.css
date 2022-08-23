@@ -24,3 +24,21 @@
   left: 30px;
   color: whitesmoke;
 }
+
+.card-body-expanded .pic-container-4{
+  width: 100%;
+  height: 100%;
+}
+
+.card-body-expanded .test-div{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+}
+
+.card-body-expanded  .title-contact-click{
+  display: none;
+}

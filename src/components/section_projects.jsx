@@ -13,9 +13,7 @@ const Projects = (props) => {
     <>
       <section className="projects-section" ref={ref3}>
         <h1 className="projects-title">Swipe</h1>
-
         <a name="projects" />
-
         <ProjectsGallery />
       </section>
     </>

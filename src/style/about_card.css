@@ -37,7 +37,7 @@
   width: 98%;
   height: 97%;
   border-radius: 10px;
-
+  position: relative;
 }
 
 .expanded-div-close{

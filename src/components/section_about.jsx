@@ -19,9 +19,9 @@ const About = (props) => {
 
   return (
     <>
-      <section className="about-section" id="about" ref={ref2}>
+      <section className="about-section" id="about" ref={ref2} name="about">
         <div id="about-bg1" className="about-tiles-bg" />
-        <a name="about" />
+
         <div className="shadow-about shadow-top" />
 
         <div className="about-container">
@@ -31,6 +31,7 @@ const About = (props) => {
           <AboutCard id="about-card-two">
             <Secound />
           </AboutCard>
+
           <AboutCard id="about-card-three" onClick={true}>
             <Third />
           </AboutCard>
