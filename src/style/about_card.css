@@ -19,7 +19,8 @@
   width: 80vw;
   height: 80vh;
   position: absolute;
-  margin: auto;
+  top: 10vh;
+
   z-index: 12;
   background: rgba( 255, 255, 255, 0.5 );
   box-shadow: 0 8px 25px 0 rgba( 200, 200, 200, 0.37 );
@@ -29,6 +30,7 @@
   align-items:center;
   justify-content: center;
   border-radius: 10px;
+  
 
 
 }
@@ -38,6 +40,7 @@
   height: 97%;
   border-radius: 10px;
   position: relative;
+  overflow-y: auto;
 }
 
 .expanded-div-close{
