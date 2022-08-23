@@ -73,3 +73,19 @@
         padding: 6rem;
     }  }
   
+
+    @media (max-width: 720px) {
+        .project-carousel{
+            padding: 1rem;
+        }  
+    
+        .item{
+            min-width: 22rem;
+            min-height: 30rem;
+
+        }
+        .name{
+            font-size: 20pt;
+            
+        }}
+      

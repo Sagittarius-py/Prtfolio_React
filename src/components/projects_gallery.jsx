@@ -27,7 +27,7 @@ const ProjectGallery = () => {
     },
     {
       id: 2,
-      name: "Seccond Portfolio",
+      name: "Second Portfolio",
       image: img2,
       link: "https://github.com/Sagittarius-py/Portfolio-Two",
       active: false,

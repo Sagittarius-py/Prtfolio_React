@@ -5,6 +5,7 @@ import useIsInViewport from "./isVisible";
 
 import First from "./about_content/first";
 import Secound from "./about_content/secound";
+import Third from "./about_content/third";
 import Fourth from "./about_content/fourth";
 
 import AboutCard from "./about_card";
@@ -19,6 +20,7 @@ const About = (props) => {
   return (
     <>
       <section className="about-section" id="about" ref={ref2}>
+        <div id="about-bg1" className="about-tiles-bg" />
         <a name="about" />
         <div className="shadow-about shadow-top" />
 
@@ -29,7 +31,9 @@ const About = (props) => {
           <AboutCard id="about-card-two">
             <Secound />
           </AboutCard>
-          <AboutCard id="about-card-three"></AboutCard>
+          <AboutCard id="about-card-three" onClick={true}>
+            <Third />
+          </AboutCard>
           <AboutCard id="about-card-four" onClick={true}>
             <Fourth />
           </AboutCard>

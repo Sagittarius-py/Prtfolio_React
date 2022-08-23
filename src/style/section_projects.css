@@ -8,5 +8,15 @@
     top: 0;
     display: flex;
     align-items: center;
+    padding-top: 8vh;
 }
-
+.projects-title{
+    width: 100vw;
+    position: absolute;
+    top:8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 50pt;
+}
